@@ -1,0 +1,41 @@
+import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react";
+import { GiBroom } from "react-icons/gi";
+import { BroomIcon } from "../../../public/icons/broom-icon";
+
+type CardProps = {
+  service_name: string;
+  description: string;
+  icon: JSX.Element;
+};
+
+const CategoryCard = ({ service_name, description, icon }: CardProps) => {
+  return (
+    <Box
+      //onClick={} //should redirect to the category
+      _hover={{ bg: "green.400", mb: "8px" }}
+      bg="green.500"
+      h={56}
+      w={56}
+      borderRadius={6}
+    >
+      <VStack h="full" w="full" p={5}>
+        <Stack
+          position="sticky"
+          overflow="hidden"
+          borderWidth={1}
+          borderRadius={300}
+          bg="blackAlpha.400"
+          p={2}
+        >
+          {icon}
+        </Stack>
+        <Heading size="lg">{service_name}</Heading>
+        <Text m={0} textAlign="start" fontSize={14} noOfLines={3}>
+          {description}
+        </Text>
+      </VStack>
+    </Box>
+  );
+};
+
+export default CategoryCard;
