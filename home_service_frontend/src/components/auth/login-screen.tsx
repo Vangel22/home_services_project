@@ -5,16 +5,13 @@ import {
   Heading,
   Spacer,
   Link,
-  toast,
   useToast,
   HStack,
-  Divider,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { route } from "next/dist/server/router";
 
 export const LoginScreen = () => {
   const [username, setUsername] = useState("");

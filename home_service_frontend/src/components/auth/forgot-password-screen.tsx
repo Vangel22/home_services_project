@@ -14,7 +14,6 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
-import { BsHouse } from "react-icons/bs";
 
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState("");

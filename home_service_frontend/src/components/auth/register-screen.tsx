@@ -5,14 +5,11 @@ import {
   Input,
   Spacer,
   Button,
-  Link,
   useToast,
   HStack,
   IconButton,
   Tooltip,
-  Divider,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { BiArrowBack } from "react-icons/bi";
