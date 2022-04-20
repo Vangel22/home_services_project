@@ -6,7 +6,7 @@ import CategoryCard from "../cards/category-card";
 
 export const HomeCarousel = () => {
   return (
-    <Stack h="full" w="full" p={10} bg="blackAlpha.300">
+    <Stack h="full" w="full" p={10} bg="blackAlpha.400">
       <HStack w="full" h="full" justify="flex-end" pl={48} pr={12} spacing={10}>
         <Heading fontWeight="extrabold" size="2xl" color="white" maxW={48}>
           Листа од услуги кои ги нудиме
