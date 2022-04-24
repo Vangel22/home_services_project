@@ -83,7 +83,7 @@ const RegisterScreen = () => {
             </Tooltip>
             <Tooltip label="Go back to Home">
               <IconButton
-                onClick={() => router.push("/home")}
+                onClick={() => router.push("/")}
                 colorScheme="gray"
                 alignSelf="flex-start"
                 aria-label="goBack"
