@@ -17,6 +17,7 @@ const HomeScreen = () => {
         h="100vh"
         w="full"
         justify="center"
+        align='stretch'
         bgImage="/images/test-image.jpeg"
       >
         <MenuBar />

@@ -8,7 +8,7 @@ const MenuBar = () => {
   //Proverka ako korisnikot e logiran, kopceto login treba da bide disabled
 
   return (
-    <VStack spacing={24}>
+    <VStack spacing={24} color={'white'}>
       <HStack justify="center">
         <HStack h="full" w="full" justify="center" spacing={5} m={2}>
           <Text>Најди помошник</Text>
@@ -17,18 +17,19 @@ const MenuBar = () => {
           <Text>Контакт</Text>
           <HStack pl={6} justify="flex-end">
             <Button
-              _hover={{ bg: "gray.300" }}
+              _hover={{ bg: "#6B774B" }}
               variant="ghost"
               //isDisabled={isUserLoggedIn}
               onClick={() => router.push("/login")}
             >
-              Login
+              Најава 
             </Button>
             <Button
-              colorScheme="green"
+              bgColor={"#93A560"}
+              _hover={{ bg: "" }}
               onClick={() => router.push("/register")}
             >
-              Register
+              Регистрација 
             </Button>
           </HStack>
         </HStack>

@@ -59,20 +59,20 @@ const RegisterScreen = () => {
   };
 
   return (
-    <VStack w="full" h="100vh" bgImage="/images/home-image.png">
+    <VStack w="full" h="100vh" bgImage="/images/home-image1.png">
       <VStack h="full" w="full" justify="center">
         <VStack
-          h="fit-content"
-          w="md"
+          h={500}
+          w="lg"
           bg="white"
           textAlign="center"
           borderRadius={8}
-          spacing={4}
-          p={4}
+          spacing={6}
+          p={14}
           shadow="2xl"
         >
           <HStack w="full">
-            <Tooltip label="Go back to Login">
+            <Tooltip label="">
               <IconButton
                 onClick={() => router.push("/login")}
                 colorScheme="gray"
@@ -81,7 +81,7 @@ const RegisterScreen = () => {
                 icon={<BiArrowBack />}
               ></IconButton>
             </Tooltip>
-            <Tooltip label="Go back to Home">
+            <Tooltip label="Врати се на почетната страница">
               <IconButton
                 onClick={() => router.push("/")}
                 colorScheme="gray"
@@ -90,35 +90,41 @@ const RegisterScreen = () => {
                 icon={<BsHouse />}
               ></IconButton>
             </Tooltip>
-            <Heading pl={10} color="green.500">
-              Register
+            <Heading pl={10} color="#93A560">
+              Регистрација
             </Heading>
           </HStack>
           <Input
-            placeholder="Username"
+            placeholder="Корисничко име"
             type="text"
+            focusBorderColor='#93A560'
             onChange={(e) => setUsername(e.target.value)}
           />
           <Input
-            placeholder="Email"
+            placeholder="E-mail адреса"
             type="text"
+            focusBorderColor='#93A560'
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
-            placeholder="Password"
+            placeholder="Лозинка"
             type="password"
+            focusBorderColor='#93A560'
             onChange={(e) => setPassword(e.target.value)}
           />
           <Input
-            placeholder="Confirm Password"
+            placeholder="Потврди Лозинка"
             type="password"
+            focusBorderColor='#93A560'
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
           <Spacer />
           <Button
             w={48}
-            colorScheme="green"
+            bg="#93A560"
+            _hover={{ bg:"#6B774B"}}
+            color="white"
             onClick={async () => {
               const registerStatus = await register(username, email, password);
               if (registerStatus) {
@@ -126,7 +132,7 @@ const RegisterScreen = () => {
               }
             }}
           >
-            Register
+            Регистрација
           </Button>
         </VStack>
       </VStack>

@@ -12,6 +12,7 @@ import NextLink from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { url } from "inspector";
 
 export const LoginScreen = () => {
   const [username, setUsername] = useState("");
@@ -46,41 +47,49 @@ export const LoginScreen = () => {
   };
 
   return (
-    <VStack w="full" h="100vh" bgImage="/images/home-image.png">
+    <VStack w="full" h="100vh" bgImage="url('/images/home-image.jpg')">
       <VStack h="full" w="full" justify="center">
         <VStack
-          h={72}
-          w="md"
+          h={500}
+          w="lg"
           bg="white"
           textAlign="center"
           borderRadius={8}
-          spacing={4}
-          p={4}
+          spacing={10}
+          p={14}
           shadow="2xl"
         >
-          <Heading color="green.500">Login</Heading>
-          <Input placeholder="Email" type="text" onChange={handleUsername} />
+          <Heading color="#93A560">Најави се</Heading>
+          <Input 
+            placeholder="e-mail адреса" 
+            type="text" 
+            focusBorderColor='#93A560' 
+            onChange={handleUsername} 
+          />
           <Input
-            placeholder="Password"
+            placeholder="лозинка"
             type="password"
+            focusBorderColor='#93A560'
             onChange={handlePassword}
           />
           <HStack w="full" justify="space-evenly">
             <NextLink href="/forgot-password" passHref>
               <Link color="blue" lineHeight="7">
-                Forgot password?
+                Заборавена лозинка?
               </Link>
             </NextLink>
             <NextLink href="/register" passHref>
               <Link color="blue" lineHeight="7">
-                Register now
+                Регистрација
               </Link>
             </NextLink>
           </HStack>
           <Spacer />
           <Button
             w={48}
-            colorScheme="green"
+            bg="#93A560"
+            _hover={{ bg:"#6B774B"}}
+            color="white"
             onClick={async () => {
               const loginStatus = await login(username, password);
               if (loginStatus) {
@@ -88,7 +97,7 @@ export const LoginScreen = () => {
               }
             }}
           >
-            Login
+            Најави се
           </Button>
         </VStack>
       </VStack>

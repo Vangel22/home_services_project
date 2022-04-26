@@ -65,14 +65,14 @@ const ForgotPasswordScreen = () => {
             </Tooltip>
 
             <Heading pl={6} color="green.500">
-              Forgot Password
+              Заборавена лозинка? 
             </Heading>
           </HStack>
           <Text alignSelf="flex-start" color="gray">
-            * Enter your email to recieve validation mail.
+            *Ве молиме внесете ја вашата e-mail адреса. Ќе добиете линк за да креирате нова лозинка преку e-mail.
           </Text>
           <Input
-            placeholder="Email"
+            placeholder="E-mail адреса"
             type="text"
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -87,7 +87,7 @@ const ForgotPasswordScreen = () => {
               }
             }}
           >
-            Send request
+            Испрати барање
           </Button>
         </VStack>
       </VStack>

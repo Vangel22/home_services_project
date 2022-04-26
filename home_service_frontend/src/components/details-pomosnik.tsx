@@ -1,13 +1,13 @@
 import { ArrowDownIcon, SearchIcon, UpDownIcon } from "@chakra-ui/icons";
 import { Center, Icon, useBreakpointValue, Stack, Heading, VStack, Text, SimpleGrid, GridItem, FormControl, FormLabel, Input, Select, Checkbox, Button, InputGroup, InputLeftElement, HStack, Container, IconButton } from "@chakra-ui/react";
 import Head from "next/head";
-import { FiFilter } from 'react-icons/fi'
+import { FiSliders } from 'react-icons/fi'
+
 
 const DetailsPomosnik = () => {
     const colSpan = useBreakpointValue({ base: 2, md: 1 })
     return (
-        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
-
+        <VStack w="full" h="1200" p={10} spacing={10} alignItems="flex-start" bg="#E5E5E5">
             <VStack spacing={3} alignItems="flex-start">
                 <Heading size="2xl">Добар ден,Марио!</Heading>
                 <Text>Подолу ќе најдеш,листа на услуги од други помошници.</Text>
@@ -15,14 +15,14 @@ const DetailsPomosnik = () => {
             <SimpleGrid column={2} columnGap={3} rowGap={10} w="full">
                 <GridItem colSpan={colSpan}>
                     <FormControl>
-                        <Stack spacing={4}>
-                            <InputGroup>
-                                <InputLeftElement
+                        <Stack spacing={4} >
+                            <InputGroup >
+                                <InputLeftElement  
                                     pointerEvents='none'
                                     // eslint-disable-next-line react/no-children-prop
                                     children={<SearchIcon color='gray.300' />}
                                 />
-                                <Input type='search' placeholder='Search' />
+                                <Input type='search' placeholder='Search' focusBorderColor='grey.700' bg="white" />
                             </InputGroup>
                         </Stack>
                     </FormControl>
@@ -31,11 +31,11 @@ const DetailsPomosnik = () => {
                 <GridItem colSpan={colSpan}>
                     <HStack justifyContent="space-between">
                         <Heading size="md">Огласи</Heading>
-                        <Button leftIcon={<Icon as={FiFilter} />}>Filter</Button>
+                        <Button leftIcon={<Icon as={FiSliders} />}>Филтер</Button>
                     </HStack>
                 </GridItem>
 
-                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg='green.300'>
+                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg="#FFFFFF" borderRadius={10}>
                     <VStack >
                         <VStack alignItems="flex-start">
                             <Heading size="xs">МНМ КОМЕРЦ</Heading>
@@ -55,11 +55,11 @@ const DetailsPomosnik = () => {
 
                     </VStack>
                     <VStack alignItems="flex-end">
-                        <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+                        <Button bg="#E56262" color="white" _hover={{ bg:"red.500"}}>КОНТАКТИРАЈ</Button>
                     </VStack>
                 </GridItem>
 
-                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg='green.300'>
+                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg="#FFFFFF" borderRadius={10}>
                     <VStack >
                         <VStack alignItems="flex-start">
                             <Heading size="xs">МНМ КОМЕРЦ</Heading>
@@ -79,11 +79,11 @@ const DetailsPomosnik = () => {
 
                     </VStack>
                     <VStack alignItems="flex-end">
-                        <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+                        <Button bg="#E56262" color="white" _hover={{ bg:"red.500"}}>КОНТАКТИРАЈ</Button>
                     </VStack>
                 </GridItem>
 
-                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg='green.300'>
+                <GridItem colSpan={colSpan} w="full" h="full" pl={5} pt={5} pr={5} mb={-5} alignItems="flex-start" bg="#FFFFFF" borderRadius={10}>
                     <VStack >
                         <VStack alignItems="flex-start">
                             <Heading size="xs">МНМ КОМЕРЦ</Heading>
@@ -103,7 +103,7 @@ const DetailsPomosnik = () => {
 
                     </VStack>
                     <VStack alignItems="flex-end">
-                        <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+                        <Button bg="#E56262" color="white" _hover={{ bg:"red.500"}}>КОНТАКТИРАЈ</Button>
                     </VStack>
                 </GridItem>
 
@@ -111,7 +111,7 @@ const DetailsPomosnik = () => {
                 <GridItem colSpan={colSpan}>
                     <Container>
                         <VStack pl={0}>
-                            <IconButton colorScheme="blackAlpha" size="md" fontSize={40} aria-label='See more' icon={<ArrowDownIcon />} />
+                            <IconButton bg={"#A9BB76"} _hover={{ bg:"#6B774B"}} color="white" size="md" fontSize={40} aria-label='See more' icon={<ArrowDownIcon />} />
                             <Text>Види повеќе</Text>
                         </VStack>
                     </Container>
