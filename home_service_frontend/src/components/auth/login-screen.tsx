@@ -82,10 +82,11 @@ export const LoginScreen = () => {
             w={48}
             colorScheme="green"
             onClick={async () => {
-              const loginStatus = await login(username, password);
-              if (loginStatus) {
-                router.push("/home");
-              }
+              // const loginStatus = await login(username, password);
+              // if (loginStatus) {
+              //   router.push("/home");
+              // }
+              router.push("/helper");
             }}
           >
             Login

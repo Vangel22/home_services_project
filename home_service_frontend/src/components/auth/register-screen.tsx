@@ -9,6 +9,9 @@ import {
   HStack,
   IconButton,
   Tooltip,
+  RadioGroup,
+  Stack,
+  Radio,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -16,12 +19,15 @@ import { BiArrowBack } from "react-icons/bi";
 import { BsHouse } from "react-icons/bs";
 
 const RegisterScreen = () => {
+  const [role, setRole] = useState("client");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const router = useRouter();
   const toast = useToast();
+
+  console.log("check role", role);
 
   const register = async (
     username: string,
@@ -114,7 +120,12 @@ const RegisterScreen = () => {
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-
+          <RadioGroup onChange={setRole} value={role}>
+            <Stack direction="row">
+              <Radio value="client">Client</Radio>
+              <Radio value="servicer">Servicer</Radio>
+            </Stack>
+          </RadioGroup>
           <Spacer />
           <Button
             w={48}
