@@ -91,10 +91,11 @@ export const LoginScreen = () => {
             _hover={{ bg:"#6B774B"}}
             color="white"
             onClick={async () => {
-              const loginStatus = await login(username, password);
-              if (loginStatus) {
-                router.push("/home");
-              }
+              // const loginStatus = await login(username, password);
+              // if (loginStatus) {
+              //   router.push("/home");
+              // }
+              router.push("/helper");
             }}
           >
             Најави се
