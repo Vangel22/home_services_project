@@ -100,39 +100,39 @@ const RegisterScreen = () => {
               Регистрација
             </Heading>
           </HStack>
-          <Input
+          <Input h={40}
             placeholder="Корисничко име"
             type="text"
             focusBorderColor='#93A560'
             onChange={(e) => setUsername(e.target.value)}
           />
-          <Input
+          <Input h={40}
             placeholder="E-mail адреса"
             type="text"
             focusBorderColor='#93A560'
             onChange={(e) => setEmail(e.target.value)}
           />
-          <Input
+          <Input h={40}
             placeholder="Лозинка"
             type="password"
             focusBorderColor='#93A560'
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Input
+          <Input h={40}
             placeholder="Потврди Лозинка"
             type="password"
             focusBorderColor='#93A560'
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <RadioGroup onChange={setRole} value={role}>
+          <RadioGroup onChange={setRole} value={role} colorScheme="green">
             <Stack direction="row">
               <Radio value="client">Client</Radio>
               <Radio value="servicer">Servicer</Radio>
             </Stack>
           </RadioGroup>
-          <Spacer />
           <Button
             w={48}
+            h={60}
             bg="#93A560"
             _hover={{ bg:"#6B774B"}}
             color="white"
