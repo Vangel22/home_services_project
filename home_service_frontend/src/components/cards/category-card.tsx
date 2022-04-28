@@ -12,8 +12,8 @@ const CategoryCard = ({ service_name, description, icon }: CardProps) => {
   return (
     <Box
       //onClick={} //should redirect to the category
-      _hover={{ bg: "green.400", mb: "8px" }}
-      bg="green.500"
+      _hover={{ bg: "#93A560", mb: "56px" }}
+      bg="#6B774B"
       h={56}
       w={56}
       borderRadius={6}

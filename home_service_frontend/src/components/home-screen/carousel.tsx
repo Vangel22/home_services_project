@@ -4,11 +4,12 @@ import { CookIcon } from "../../../public/icons/cook-icon";
 import { ElectricCable } from "../../../public/icons/electric-cable";
 import CategoryCard from "../cards/category-card";
 
+
 export const HomeCarousel = () => {
   return (
-    <Stack h="full" w="full" p={10} bg="blackAlpha.300">
+    <Stack h="full" w="full" p={10} bg="blackAlpha.400">
       <HStack w="full" h="full" justify="flex-end" pl={48} pr={12} spacing={10}>
-        <Heading fontWeight="extrabold" size="2xl" color="white" maxW={48}>
+        <Heading fontWeight="extrabold" size="4xl" color="white" maxW={330} maxH={80}>
           Листа од услуги кои ги нудиме
         </Heading>
         <Spacer />
