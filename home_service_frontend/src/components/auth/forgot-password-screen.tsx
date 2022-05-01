@@ -64,7 +64,7 @@ const ForgotPasswordScreen = () => {
               ></IconButton>
             </Tooltip>
 
-            <Heading pl={6} color="green.500">
+            <Heading pl={6} color="#93A560" as='h3' size='lg' >
               Заборавена лозинка? 
             </Heading>
           </HStack>
@@ -74,12 +74,15 @@ const ForgotPasswordScreen = () => {
           <Input
             placeholder="E-mail адреса"
             type="text"
+            focusBorderColor='#93A560'
             onChange={(e) => setEmail(e.target.value)}
           />
           <Spacer />
           <Button
             w={48}
-            colorScheme="green"
+            bg="#93A560"
+            _hover={{ bg:"#6B774B"}}
+            color="white"
             onClick={async () => {
               const forgotStatus = await forgotPassword(email);
               if (forgotStatus) {

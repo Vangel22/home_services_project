@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react";
+import { VStack, Img } from "@chakra-ui/react";
 import Image from "next/image";
 
 import { HomeCarousel } from "./carousel";
@@ -10,8 +10,10 @@ const HomeScreen = () => {
       {/* <Image
         src="/images/test-image.jpeg"
         layout="fill"
-        objectFit="fill"
+        objectFit="cover"
         alt="No photo provided"
+        
+        //objectPosition="relative"
       /> */}
       <VStack
         h="100vh"
@@ -19,7 +21,9 @@ const HomeScreen = () => {
         justify="center"
         align='stretch'
         bgImage="/images/test-image.jpeg"
-      >
+         objectFit="fill" 
+      > 
+
         <MenuBar />
         <HomeCarousel />
       </VStack>

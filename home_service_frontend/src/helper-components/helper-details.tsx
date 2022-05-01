@@ -16,13 +16,15 @@ import {
   HStack,
   Container,
   IconButton,
+  Box,
+  ButtonGroup,
 } from "@chakra-ui/react";
 import { FiFilter } from "react-icons/fi";
 
 const HelperDetails = () => {
   const colSpan = useBreakpointValue({ base: 2, md: 1 });
   return (
-    <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
+    <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start" >
       <VStack spacing={3} alignItems="flex-start">
         <Heading size="2xl">Добар ден,Марио!</Heading>
         <Text>Подолу ќе најдеш,листа на услуги од други помошници.</Text>
@@ -33,20 +35,25 @@ const HelperDetails = () => {
             <Stack spacing={4}>
               <InputGroup>
                 <InputLeftElement
+                
                   pointerEvents="none"
                   // eslint-disable-next-line react/no-children-prop
-                  children={<SearchIcon color="gray.300" />}
+                  children={<SearchIcon color="gray.300"  />}
                 />
-                <Input type="search" placeholder="Search" />
+                <Input type="search" placeholder="Search" focusBorderColor="green.500" />
               </InputGroup>
             </Stack>
           </FormControl>
         </GridItem>
 
         <GridItem colSpan={colSpan}>
+
           <HStack justifyContent="space-between">
-            <Heading size="md">Огласи</Heading>
-            <Button leftIcon={<Icon as={FiFilter} />}>Filter</Button>
+          <ButtonGroup>
+            <Button color="white" bg="#6B774B">Огласи</Button>
+            <Button color="white" bg="#A9BB76">Профили</Button>
+          </ButtonGroup>
+            <Button leftIcon={<Icon as={FiFilter} />}>Филтер</Button>
           </HStack>
         </GridItem>
 
@@ -60,8 +67,9 @@ const HelperDetails = () => {
           mb={-5}
           alignItems="flex-start"
           bg="green.300"
+          borderRadius={10}
         >
-          <VStack>
+          <VStack >
             <VStack alignItems="flex-start">
               <Heading size="xs">МНМ КОМЕРЦ</Heading>
               <Text>Информации за помошникот</Text>
@@ -89,7 +97,12 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+          <Button 
+              bg="#E56262" 
+              color="white" 
+              _hover={{ bg: "#E53E3E" }} 
+              variant="ghost"
+            >КОНТАКТИРАЈ</Button>
           </VStack>
         </GridItem>
 
@@ -103,6 +116,7 @@ const HelperDetails = () => {
           mb={-5}
           alignItems="flex-start"
           bg="green.300"
+          borderRadius={10}
         >
           <VStack>
             <VStack alignItems="flex-start">
@@ -132,7 +146,12 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+            <Button 
+              bg="#E56262" 
+              color="white" 
+              _hover={{ bg: "#E53E3E" }} 
+              variant="ghost"
+            >КОНТАКТИРАЈ</Button>
           </VStack>
         </GridItem>
 
@@ -146,6 +165,7 @@ const HelperDetails = () => {
           mb={-5}
           alignItems="flex-start"
           bg="green.300"
+          borderRadius={10}
         >
           <VStack>
             <VStack alignItems="flex-start">
@@ -175,7 +195,12 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button colorScheme="red">КОНТАКТИРАЈ</Button>
+            <Button 
+              bg="#E56262" 
+              color="white" 
+              _hover={{ bg: "#E53E3E" }} 
+              variant="ghost"
+            >КОНТАКТИРАЈ</Button>
           </VStack>
         </GridItem>
 
@@ -183,7 +208,8 @@ const HelperDetails = () => {
           <Container>
             <VStack pl={0}>
               <IconButton
-                colorScheme="blackAlpha"
+                bg="#A9BB76"
+                color="white"
                 size="md"
                 fontSize={40}
                 aria-label="See more"
