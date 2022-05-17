@@ -7,14 +7,6 @@ import MenuBar from "./menu-bar";
 const HomeScreen = () => {
   return (
     <>
-      {/* <Image
-        src="/images/test-image.jpeg"
-        layout="fill"
-        objectFit="cover"
-        alt="No photo provided"
-        
-        //objectPosition="relative"
-      /> */}
       <VStack
         h="full"
         w="full"
