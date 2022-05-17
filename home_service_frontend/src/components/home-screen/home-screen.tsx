@@ -16,14 +16,13 @@ const HomeScreen = () => {
         //objectPosition="relative"
       /> */}
       <VStack
-        h="100vh"
+        h="full"
         w="full"
         justify="center"
-        align='stretch'
+        align="stretch"
         bgImage="/images/test-image.jpeg"
-         objectFit="fill" 
-      > 
-
+        objectFit="fill"
+      >
         <MenuBar />
         <HomeCarousel />
       </VStack>
