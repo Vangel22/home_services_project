@@ -12,7 +12,6 @@ import NextLink from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { url } from "inspector";
 
 export const LoginScreen = () => {
   const [username, setUsername] = useState("");
@@ -30,7 +29,7 @@ export const LoginScreen = () => {
 
   const login = async (username: string, password: string) => {
     try {
-      const res = await axios.post("http://localhost:1337/auth/local", {
+      const res = await axios.post("http://localhost:1337/api/auth/local", {
         identifier: username,
         password: password,
       });
@@ -60,16 +59,16 @@ export const LoginScreen = () => {
           shadow="2xl"
         >
           <Heading color="#93A560">Најави се</Heading>
-          <Input 
-            placeholder="e-mail адреса" 
-            type="text" 
-            focusBorderColor='#93A560' 
-            onChange={handleUsername} 
+          <Input
+            placeholder="e-mail адреса"
+            type="text"
+            focusBorderColor="#93A560"
+            onChange={handleUsername}
           />
           <Input
             placeholder="лозинка"
             type="password"
-            focusBorderColor='#93A560'
+            focusBorderColor="#93A560"
             onChange={handlePassword}
           />
           <HStack w="full" justify="space-evenly">
@@ -88,14 +87,16 @@ export const LoginScreen = () => {
           <Button
             w={48}
             bg="#93A560"
-            _hover={{ bg:"#6B774B"}}
+            _hover={{ bg: "#6B774B" }}
             color="white"
             onClick={async () => {
-              // const loginStatus = await login(username, password);
-              // if (loginStatus) {
-              //   router.push("/home");
-              // }
-              router.push("/helper");
+              const res = await login(username, password);
+              if (res?.data.user.Role === "Helper") {
+                router.push("/helper");
+              }
+              if (res?.data.user.Role === "Client") {
+                router.push("/client");
+              }
             }}
           >
             Најави се
