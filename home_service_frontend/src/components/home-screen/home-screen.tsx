@@ -7,23 +7,14 @@ import MenuBar from "./menu-bar";
 const HomeScreen = () => {
   return (
     <>
-      {/* <Image
-        src="/images/test-image.jpeg"
-        layout="fill"
-        objectFit="cover"
-        alt="No photo provided"
-        
-        //objectPosition="relative"
-      /> */}
       <VStack
-        h="100vh"
+        h="full"
         w="full"
         justify="center"
-        align='stretch'
+        align="stretch"
         bgImage="/images/test-image.jpeg"
-         objectFit="fill" 
-      > 
-
+        objectFit="fill"
+      >
         <MenuBar />
         <HomeCarousel />
       </VStack>
