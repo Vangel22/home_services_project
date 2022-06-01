@@ -23,12 +23,15 @@ const HelperCard = () => {
   return (
     <VStack
       w={400}
-      h="full"
+
       p={10}
       spacing={10}
       alignItems="center"
       bg={bgColor}
       borderRadius={10}
+      style={{
+        height: 610,
+      }}
     >
       <VStack spacing={3} alignItems="center">
         <AspectRatio ratio={1} w={24}>
@@ -55,11 +58,11 @@ const HelperCard = () => {
 
         <Divider size="lg" />
 
-        <Button w="full" h={70} size="lg" colorScheme="green">
+        <Button w="full" h={70} size="lg" bg={"#F2F2F2"}>
           Додади Услуга
         </Button>
 
-        <Container w="full" p={5} >
+        <Container w="full" p={5} bg={"#F2F2F2"}>
           <VStack alignItems="flex-start">
             <VStack>
               <Heading size="xs">Твои поставки</Heading>
@@ -86,11 +89,11 @@ const HelperCard = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button 
+            <Button
               leftIcon={<Icon as={FiEdit} />}
-              bg="#E56262" 
-              color="white" 
-              _hover={{ bg: "#E53E3E" }} 
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
               variant="ghost"
             >Измени</Button>
           </VStack>

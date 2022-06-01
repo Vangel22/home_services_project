@@ -19,32 +19,32 @@ const CategoryProfileCard = () => {
             <SimpleGrid columns={[2, null, 2]} columnGap={10} rowGap={10} h="full">
                 <GridItem colSpan={colSpan}>
 
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Електричар</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Електричар</Button>
 
 
 
                 </GridItem>
 
                 <GridItem colSpan={colSpan}>
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Готовач</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Готовач</Button>
                 </GridItem>
 
                 <GridItem colSpan={colSpan}>
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Чистач</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Чистач</Button>
                 </GridItem>
 
                 <GridItem colSpan={colSpan}>
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Чистач</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Чистач</Button>
                 </GridItem>
                 <GridItem colSpan={colSpan}>
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Чистач</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Чистач</Button>
                 </GridItem>
 
                 <GridItem colSpan={colSpan}>
-                    <Button colorScheme="green" w={150} h={120} fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} />}>Чистач</Button>
+                    <Button bg={"#B2C779"} _hover={{ bg: "#6B774B" }} w={150} h={120} color="white" fontSize={20} flexDirection="column" leftIcon={<Icon as={FiFilter} w={50} h={50} color="white" />}>Чистач</Button>
                 </GridItem>
 
-                <GridItem alignItems="flex-end" pl={200}>
+                <GridItem alignItems="flex-end" pl={200} style={{ marginTop: -20 }}>
 
                     <Button w={135} h={30} colorScheme="red">ПОВЕЌЕ</Button>
 

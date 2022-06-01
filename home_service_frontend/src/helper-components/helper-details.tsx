@@ -20,9 +20,13 @@ import {
   ButtonGroup,
 } from "@chakra-ui/react";
 import { FiFilter } from "react-icons/fi";
+import { useRouter } from 'next/router'
+
 
 const HelperDetails = () => {
   const colSpan = useBreakpointValue({ base: 2, md: 1 });
+  const router = useRouter();
+
   return (
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start" >
       <VStack spacing={3} alignItems="flex-start">
@@ -35,10 +39,10 @@ const HelperDetails = () => {
             <Stack spacing={4}>
               <InputGroup>
                 <InputLeftElement
-                
+
                   pointerEvents="none"
                   // eslint-disable-next-line react/no-children-prop
-                  children={<SearchIcon color="gray.300"  />}
+                  children={<SearchIcon color="gray.300" />}
                 />
                 <Input type="search" placeholder="Search" focusBorderColor="green.500" />
               </InputGroup>
@@ -49,10 +53,11 @@ const HelperDetails = () => {
         <GridItem colSpan={colSpan}>
 
           <HStack justifyContent="space-between">
-          <ButtonGroup>
-            <Button color="white" bg="#6B774B">Огласи</Button>
-            <Button color="white" bg="#A9BB76">Профили</Button>
-          </ButtonGroup>
+            <ButtonGroup>
+              <Button onClick={() => router.push('#')} w={114} h={30} rounded="lg" bg="#6B774B" >Огласи</Button>
+
+              <Button onClick={() => router.push('/profiles')} w={114} h={30} rounded="lg" bg="#A9BB76" >Профили</Button>
+            </ButtonGroup>
             <Button leftIcon={<Icon as={FiFilter} />}>Филтер</Button>
           </HStack>
         </GridItem>
@@ -66,7 +71,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="white"
           borderRadius={10}
         >
           <VStack >
@@ -97,10 +102,10 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-          <Button 
-              bg="#E56262" 
-              color="white" 
-              _hover={{ bg: "#E53E3E" }} 
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
               variant="ghost"
             >КОНТАКТИРАЈ</Button>
           </VStack>
@@ -115,7 +120,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="white"
           borderRadius={10}
         >
           <VStack>
@@ -146,10 +151,10 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button 
-              bg="#E56262" 
-              color="white" 
-              _hover={{ bg: "#E53E3E" }} 
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
               variant="ghost"
             >КОНТАКТИРАЈ</Button>
           </VStack>
@@ -164,7 +169,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="white"
           borderRadius={10}
         >
           <VStack>
@@ -195,10 +200,10 @@ const HelperDetails = () => {
             </VStack>
           </VStack>
           <VStack alignItems="flex-end">
-            <Button 
-              bg="#E56262" 
-              color="white" 
-              _hover={{ bg: "#E53E3E" }} 
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
               variant="ghost"
             >КОНТАКТИРАЈ</Button>
           </VStack>
