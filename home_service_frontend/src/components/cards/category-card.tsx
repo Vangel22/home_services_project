@@ -13,6 +13,9 @@ const CategoryCard = ({ service_name, description, icon }: CardProps) => {
     <Box
       //onClick={} //should redirect to the category
       _hover={{ bg: "#93A560", mb: "56px" }}
+      transitionProperty="all"
+      transitionDuration="400ms"
+      transitionTimingFunction="ease-out"
       bg="#6B774B"
       h={56}
       w={56}
@@ -29,8 +32,10 @@ const CategoryCard = ({ service_name, description, icon }: CardProps) => {
         >
           {icon}
         </Stack>
-        <Heading size="lg">{service_name}</Heading>
-        <Text m={0} textAlign="start" fontSize={14} noOfLines={3}>
+        <Heading size="lg" color="white">
+          {service_name}
+        </Heading>
+        <Text m={0} color="white" textAlign="start" fontSize={14} noOfLines={3}>
           {description}
         </Text>
       </VStack>
