@@ -12,7 +12,6 @@ import NextLink from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { url } from "inspector";
 
 export const LoginScreen = () => {
   const [username, setUsername] = useState("");
@@ -60,16 +59,16 @@ export const LoginScreen = () => {
           shadow="2xl"
         >
           <Heading color="#93A560">Најави се</Heading>
-          <Input 
-            placeholder="e-mail адреса" 
-            type="text" 
-            focusBorderColor='#93A560' 
-            onChange={handleUsername} 
+          <Input
+            placeholder="e-mail адреса"
+            type="text"
+            focusBorderColor="#93A560"
+            onChange={handleUsername}
           />
           <Input
             placeholder="лозинка"
             type="password"
-            focusBorderColor='#93A560'
+            focusBorderColor="#93A560"
             onChange={handlePassword}
           />
           <HStack w="full" justify="space-evenly">
@@ -88,7 +87,7 @@ export const LoginScreen = () => {
           <Button
             w={48}
             bg="#93A560"
-            _hover={{ bg:"#6B774B"}}
+            _hover={{ bg: "#6B774B" }}
             color="white"
             onClick={async () => {
               // const loginStatus = await login(username, password);
