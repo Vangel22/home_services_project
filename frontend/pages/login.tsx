@@ -43,7 +43,12 @@ export const LoginPage = () => {
       body: JSON.stringify(loginInfo),
     });
     if (response.status !== 200) {
-      throw new Error("Invalid credentials");
+      toast({
+        description: "Invalid credentials!",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     } else {
       const loginResponse = await response.json();
       window.localStorage.setItem("token", loginResponse.jwt);
