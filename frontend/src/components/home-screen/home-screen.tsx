@@ -1,24 +1,21 @@
-import { VStack, Img } from "@chakra-ui/react";
-import Image from "next/image";
+import { VStack, Image } from "@chakra-ui/react";
 
 import { HomeCarousel } from "./carousel";
 import MenuBar from "./menu-bar";
 
 const HomeScreen = () => {
   return (
-    <>
-      <VStack
-        h="full"
-        w="full"
-        justify="center"
-        align="stretch"
-        bgImage="/images/test-image.jpeg"
-        objectFit="fill"
-      >
-        <MenuBar />
-        <HomeCarousel />
-      </VStack>
-    </>
+    <VStack
+      h="full"
+      w="full"
+      align="stretch"
+      justify="center"
+      bgImage="url('/images/test-image.jpeg')"
+      backgroundSize="cover"
+    >
+      <MenuBar />
+      <HomeCarousel />
+    </VStack>
   );
 };
 
