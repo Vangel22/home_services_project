@@ -70,7 +70,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::service.service",
-      "inversedBy": "users"
+      "mappedBy": "users"
     }
   }
 }

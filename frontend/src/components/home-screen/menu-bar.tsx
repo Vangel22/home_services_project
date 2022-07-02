@@ -15,7 +15,6 @@ import useUser from "../hooks/use-user";
 const MenuBar = () => {
   const router = useRouter();
 
-  //Proverka ako korisnikot e logiran, kopceto login treba da bide disabled
   const userCheck = useUser();
 
   return (
