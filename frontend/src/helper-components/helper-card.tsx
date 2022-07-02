@@ -13,13 +13,13 @@ import {
   Container,
   Avatar,
 } from "@chakra-ui/react";
-import { FiEdit, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { BsTwitter, BsLinkedin, BsDribbble } from "react-icons/bs";
-
-
+import useUser from "../components/hooks/use-user";
 
 const HelperCard = () => {
   const bgColor = useColorModeValue("gray.50", "whiteAplha.50");
+  const { user } = useUser();
   return (
     <VStack
       w={400}
@@ -35,15 +35,14 @@ const HelperCard = () => {
     >
       <VStack spacing={3} alignItems="center">
         <AspectRatio ratio={1} w={24}>
-          <Avatar name='Ивана Јовановска' src="images/Avatar.jpg" />
+          <Avatar name="Ивана Јовановска" src="images/Avatar.jpg" />
         </AspectRatio>
 
-        <Heading size="md">Ивана Јовановска</Heading>
+        <Heading size="md">{user?.username}</Heading>
         <Text color="#6941C6">Founder & CEO</Text>
         <Text textAlign="center" color="#667085">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
-
         <HStack justifyContent="space-between" color="#98A2B3">
           <Link href="#">
             <BsTwitter />
@@ -62,7 +61,11 @@ const HelperCard = () => {
           Додади Услуга
         </Button>
 
+<<<<<<< HEAD:home_service_frontend/src/helper-components/helper-card.tsx
         <Container w="full" p={5} bg={"#F2F2F2"}>
+=======
+        <Container w="full" p={5}>
+>>>>>>> 8ecb2a3e131b5f96a38ce5317cece9b25c1369b4:frontend/src/helper-components/helper-card.tsx
           <VStack alignItems="flex-start">
             <VStack>
               <Heading size="xs">Твои поставки</Heading>
@@ -95,7 +98,9 @@ const HelperCard = () => {
               color="white"
               _hover={{ bg: "#E53E3E" }}
               variant="ghost"
-            >Измени</Button>
+            >
+              Измени
+            </Button>
           </VStack>
         </Container>
       </VStack>

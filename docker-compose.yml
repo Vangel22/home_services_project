@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  homeservicefrontend:
+    image: homeservicefrontend
+    build:
+      context: frontend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    command: npm run dev
+
+  homeservicebackend:
+    image: homeservicebackend
+    build:
+      context: backend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080
+    command: npm run develop
