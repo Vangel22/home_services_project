@@ -20,6 +20,17 @@
       "name": "Attach to Strapi",
       "processId": "${command:PickProcess}",
       "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Docker Node.js Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node",
+      "node": {
+        "package": "${workspaceFolder}/frontend/package.json",
+        "localRoot": "${workspaceFolder}/frontend"
+      }
     }
   ]
 }
