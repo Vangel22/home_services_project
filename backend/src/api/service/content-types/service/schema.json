@@ -32,12 +32,6 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "services"
-    },
-    "CompanyName": {
-      "type": "string"
-    },
-    "AvailableFrom": {
-      "type": "datetime"
     }
   }
 }
