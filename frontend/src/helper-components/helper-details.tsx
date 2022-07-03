@@ -19,9 +19,7 @@ import {
   Box,
   ButtonGroup,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { FiFilter } from "react-icons/fi";
-import ServiceCard from "../components/cards/service-card";
 import useUser from "../components/hooks/use-user";
 
 const HelperDetails = () => {
@@ -68,7 +66,174 @@ const HelperDetails = () => {
           </HStack>
         </GridItem>
 
-        <ServiceCard />
+        <GridItem
+          colSpan={colSpan}
+          w="full"
+          h="full"
+          pl={5}
+          pt={5}
+          pr={5}
+          mb={-5}
+          alignItems="flex-start"
+          bg="green.300"
+          borderRadius={10}
+        >
+          <VStack>
+            <VStack alignItems="flex-start">
+              <Heading size="xs">МНМ КОМЕРЦ</Heading>
+              <Text>Информации за помошникот</Text>
+              <Text fontSize={14}>
+                Mattis enim, vitae cursus pellentesque sed. Orci ultrices quis a
+                lobortis. Vitae posuere pretium dolor egestas viverra nisi,
+                fusce gravida dui. Diam nibh velit id pharetra, nisl neque
+                sapien, nisl. Blandit sed sagittis adipiscing et in. Tempor,
+                vitae a orci aliquet tellus, nisl, non. Viverra orci libero,
+                quam donec nisi, hendrerit.
+              </Text>
+
+              <HStack justifyContent="space-between" pt={5}>
+                <Heading size="xs">Цена:</Heading>
+                <Text fontSize="sm">По договор</Text>
+                <Heading size="xs" pl={5}>
+                  Достапност:
+                </Heading>
+                <Text fontSize="sm">09:00ч до 21:00ч</Text>
+                <Heading size="xs" pl={5}>
+                  Локација:
+                </Heading>
+                <Text fontSize="sm">Куманово</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+          <VStack alignItems="flex-end">
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
+              variant="ghost"
+            >
+              КОНТАКТИРАЈ
+            </Button>
+          </VStack>
+        </GridItem>
+
+        <GridItem
+          colSpan={colSpan}
+          w="full"
+          h="full"
+          pl={5}
+          pt={5}
+          pr={5}
+          mb={-5}
+          alignItems="flex-start"
+          bg="green.300"
+          borderRadius={10}
+        >
+          <VStack>
+            <VStack alignItems="flex-start">
+              <Heading size="xs">МНМ КОМЕРЦ</Heading>
+              <Text>Информации за помошникот</Text>
+              <Text fontSize={14}>
+                Mattis enim, vitae cursus pellentesque sed. Orci ultrices quis a
+                lobortis. Vitae posuere pretium dolor egestas viverra nisi,
+                fusce gravida dui. Diam nibh velit id pharetra, nisl neque
+                sapien, nisl. Blandit sed sagittis adipiscing et in. Tempor,
+                vitae a orci aliquet tellus, nisl, non. Viverra orci libero,
+                quam donec nisi, hendrerit.
+              </Text>
+
+              <HStack justifyContent="space-between" pt={5}>
+                <Heading size="xs">Цена:</Heading>
+                <Text fontSize="sm">По договор</Text>
+                <Heading size="xs" pl={5}>
+                  Достапност:
+                </Heading>
+                <Text fontSize="sm">09:00ч до 21:00ч</Text>
+                <Heading size="xs" pl={5}>
+                  Локација:
+                </Heading>
+                <Text fontSize="sm">Куманово</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+          <VStack alignItems="flex-end">
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
+              variant="ghost"
+            >
+              КОНТАКТИРАЈ
+            </Button>
+          </VStack>
+        </GridItem>
+
+        <GridItem
+          colSpan={colSpan}
+          w="full"
+          h="full"
+          pl={5}
+          pt={5}
+          pr={5}
+          mb={-5}
+          alignItems="flex-start"
+          bg="green.300"
+          borderRadius={10}
+        >
+          <VStack>
+            <VStack alignItems="flex-start">
+              <Heading size="xs">МНМ КОМЕРЦ</Heading>
+              <Text>Информации за помошникот</Text>
+              <Text fontSize={14}>
+                Mattis enim, vitae cursus pellentesque sed. Orci ultrices quis a
+                lobortis. Vitae posuere pretium dolor egestas viverra nisi,
+                fusce gravida dui. Diam nibh velit id pharetra, nisl neque
+                sapien, nisl. Blandit sed sagittis adipiscing et in. Tempor,
+                vitae a orci aliquet tellus, nisl, non. Viverra orci libero,
+                quam donec nisi, hendrerit.
+              </Text>
+
+              <HStack justifyContent="space-between" pt={5}>
+                <Heading size="xs">Цена:</Heading>
+                <Text fontSize="sm">По договор</Text>
+                <Heading size="xs" pl={5}>
+                  Достапност:
+                </Heading>
+                <Text fontSize="sm">09:00ч до 21:00ч</Text>
+                <Heading size="xs" pl={5}>
+                  Локација:
+                </Heading>
+                <Text fontSize="sm">Куманово</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+          <VStack alignItems="flex-end">
+            <Button
+              bg="#E56262"
+              color="white"
+              _hover={{ bg: "#E53E3E" }}
+              variant="ghost"
+            >
+              КОНТАКТИРАЈ
+            </Button>
+          </VStack>
+        </GridItem>
+
+        <GridItem colSpan={colSpan}>
+          <Container>
+            <VStack pl={0}>
+              <IconButton
+                bg="#A9BB76"
+                color="white"
+                size="md"
+                fontSize={40}
+                aria-label="See more"
+                icon={<ArrowDownIcon />}
+              />
+              <Text>Види повеќе</Text>
+            </VStack>
+          </Container>
+        </GridItem>
       </SimpleGrid>
     </VStack>
   );
