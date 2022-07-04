@@ -1,5 +1,4 @@
 import { ArrowDownIcon, SearchIcon } from "@chakra-ui/icons";
-import Image from "next/image";
 import {
   Icon,
   useBreakpointValue,
@@ -23,24 +22,14 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
 } from "@chakra-ui/react";
 import router from "next/router";
 import { FiFilter } from "react-icons/fi";
 import useUser from "../components/hooks/use-user";
-import next from "next";
 
 const HelperDetails = () => {
   const colSpan = useBreakpointValue({ base: 2, md: 1 });
   const { user } = useUser();
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
@@ -74,29 +63,19 @@ const HelperDetails = () => {
               <Button color="white" bg="#6B774B">
                 Огласи
               </Button>
-              <Button
-                color="white"
-                bg="#A9BB76"
-                onClick={() => router.push("/profiles")}
-              >
+              <Button color="white" bg="#A9BB76" onClick={() => router.push('/profiles')} >
                 Профили
               </Button>
             </ButtonGroup>
             {/* <Button leftIcon={<Icon as={FiFilter} />}>Филтер</Button> */}
             <Menu>
-              <MenuButton
-                as={Button}
-                bg="white"
-                colorScheme="whiteAlpha"
-                color="black"
-                leftIcon={<Icon as={FiFilter} />}
-              >
-                Филтер
+              <MenuButton as={Button} bg="white" colorScheme="whiteAlpha" color="black" leftIcon={<Icon as={FiFilter} />}>
+                  Филтер
               </MenuButton>
               <MenuList>
-                <MenuItem>Цена</MenuItem>
-                <MenuItem>Достапност</MenuItem>
-              </MenuList>
+              <MenuItem>Цена</MenuItem>
+              <MenuItem>Достапност</MenuItem>
+              </MenuList> 
             </Menu>
           </HStack>
         </GridItem>
@@ -142,7 +121,6 @@ const HelperDetails = () => {
           </VStack>
           <VStack alignItems="flex-end">
             <Button
-              onClick={onOpen}
               bg="#E56262"
               color="white"
               _hover={{ bg: "#E53E3E" }}
@@ -194,7 +172,6 @@ const HelperDetails = () => {
           </VStack>
           <VStack alignItems="flex-end">
             <Button
-              onClick={onOpen}
               bg="#E56262"
               color="white"
               _hover={{ bg: "#E53E3E" }}
@@ -246,7 +223,6 @@ const HelperDetails = () => {
           </VStack>
           <VStack alignItems="flex-end">
             <Button
-              onClick={onOpen}
               bg="#E56262"
               color="white"
               _hover={{ bg: "#E53E3E" }}
@@ -254,21 +230,6 @@ const HelperDetails = () => {
             >
               КОНТАКТИРАЈ
             </Button>
-            <Modal isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
-              <ModalContent>
-                <ModalHeader textAlign="center">Scan QR code</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody textAlign="center">
-                  <Image
-                    alt="My user"
-                    src={"/images/user-qr-code.png"}
-                    height="300px"
-                    width="300px"
-                  />
-                </ModalBody>
-              </ModalContent>
-            </Modal>
           </VStack>
         </GridItem>
 
