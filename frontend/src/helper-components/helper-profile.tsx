@@ -33,7 +33,7 @@ const HelperProfile = () => {
                                                 name="rate1"
                                                 starCount={5}
                                                 value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -55,7 +55,8 @@ const HelperProfile = () => {
                             <Button style={{
                                 width: 225,
                                 height: 116,
-                                fontSize: 30
+                                fontSize: 30,
+                                color: "white"
                             }} bg={"#B2C779"} _hover={{ bg: "#6B774B" }}>БУКИРАЈ</Button>
                         </Stack>
 
@@ -102,31 +103,31 @@ const HelperProfile = () => {
                             }}>
                                 <Heading size="2xl" pb={4}>Чистач</Heading>
                                 <HStack style={{
-                                    marginTop: -10,
+                                    marginTop: 10,
                                 }}>
                                     <Text fontSize={20} fontWeight="bold">Локација: </Text>
                                     <Text fontSize={20}>Скопје,Македонија</Text>
                                 </HStack>
                                 <HStack style={{
-                                    marginTop: -5,
+                                    marginTop: 5,
                                 }}>
                                     <Text fontSize={20} fontWeight="bold">Работно време: </Text>
                                     <Text fontSize={20}>09:00 до 21:00ч</Text>
                                 </HStack>
                                 <HStack style={{
-                                    marginTop: -5,
+                                    marginTop: 5,
                                 }}>
                                     <Text fontSize={20} fontWeight="bold">Слободни термини: </Text>
                                     <Text fontSize={20}>Понеделник-Петок</Text>
                                 </HStack>
                                 <HStack style={{
-                                    marginTop: -5,
+                                    marginTop: 5,
                                 }}>
                                     <Text fontSize={20} fontWeight="bold">Информации за услужни дејности:
                                     </Text>
                                 </HStack>
                                 <HStack style={{
-                                    marginTop: -8,
+                                    marginTop: 5,
                                 }}>
                                     <Text fontSize={20} style={{
                                         width: 420,
@@ -177,7 +178,7 @@ const HelperProfile = () => {
                                                 name="rate1"
                                                 starCount={5}
                                                 value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -212,7 +213,7 @@ const HelperProfile = () => {
                                                 name="rate1"
                                                 starCount={5}
                                                 value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -250,7 +251,7 @@ const HelperProfile = () => {
                                                 name="rate1"
                                                 starCount={5}
                                                 value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>

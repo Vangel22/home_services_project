@@ -61,11 +61,7 @@ const HelperCard = () => {
           Додади Услуга
         </Button>
 
-<<<<<<< HEAD:home_service_frontend/src/helper-components/helper-card.tsx
         <Container w="full" p={5} bg={"#F2F2F2"}>
-=======
-        <Container w="full" p={5}>
->>>>>>> 8ecb2a3e131b5f96a38ce5317cece9b25c1369b4:frontend/src/helper-components/helper-card.tsx
           <VStack alignItems="flex-start">
             <VStack>
               <Heading size="xs">Твои поставки</Heading>

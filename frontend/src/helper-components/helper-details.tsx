@@ -18,7 +18,12 @@ import {
   IconButton,
   Box,
   ButtonGroup,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
 } from "@chakra-ui/react";
+import router from "next/router";
 import { FiFilter } from "react-icons/fi";
 import useUser from "../components/hooks/use-user";
 
@@ -58,11 +63,20 @@ const HelperDetails = () => {
               <Button color="white" bg="#6B774B">
                 Огласи
               </Button>
-              <Button color="white" bg="#A9BB76">
+              <Button color="white" bg="#A9BB76" onClick={() => router.push('/profiles')} >
                 Профили
               </Button>
             </ButtonGroup>
-            <Button leftIcon={<Icon as={FiFilter} />}>Филтер</Button>
+            {/* <Button leftIcon={<Icon as={FiFilter} />}>Филтер</Button> */}
+            <Menu>
+              <MenuButton as={Button} bg="white" colorScheme="whiteAlpha" color="black" leftIcon={<Icon as={FiFilter} />}>
+                  Филтер
+              </MenuButton>
+              <MenuList>
+              <MenuItem>Цена</MenuItem>
+              <MenuItem>Достапност</MenuItem>
+              </MenuList> 
+            </Menu>
           </HStack>
         </GridItem>
 
@@ -75,7 +89,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="#F7FAFC"
           borderRadius={10}
         >
           <VStack>
@@ -126,7 +140,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="#F7FAFC"
           borderRadius={10}
         >
           <VStack>
@@ -177,7 +191,7 @@ const HelperDetails = () => {
           pr={5}
           mb={-5}
           alignItems="flex-start"
-          bg="green.300"
+          bg="#F7FAFC"
           borderRadius={10}
         >
           <VStack>
