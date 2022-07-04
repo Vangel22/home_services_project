@@ -1,33 +1,39 @@
 import { ArrowDownIcon, SearchIcon, UpDownIcon } from "@chakra-ui/icons";
-import { Center, Icon, Image, useBreakpointValue, Stack, Heading, VStack, Text, SimpleGrid, GridItem, FormControl, FormLabel, Input, Select, Checkbox, Button, InputGroup, InputLeftElement, HStack, Container, IconButton, AspectRatio, Divider, Link, Box } from "@chakra-ui/react";
+import { Center, Icon, Image, useBreakpointValue, Stack, Heading, VStack, Text, SimpleGrid, GridItem, FormControl, FormLabel, Input, Select, Checkbox, Button, InputGroup, InputLeftElement, HStack, Container, IconButton, AspectRatio, Divider, Link, Box, ButtonGroup, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from 'next/router'
 import StarRatingComponent from 'react-star-rating-component';
 import { BookmarkStarFill } from 'react-bootstrap-icons';
 import { MdFilter, MdFilter9, MdSettings } from 'react-icons/md'
 import { FiArrowRight, FiFilter, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import useUser from "./hooks/use-user";
+
 const ProfilesList = () => {
     const colSpan = useBreakpointValue({ base: 2, md: 1 })
     const router = useRouter();
+    const { user } = useUser();
 
     return (
         <VStack w="full" p={10} spacing={10} alignItems="flex-start" bg="gray.100">
 
             <VStack spacing={3} alignItems="flex-start">
-                <Heading size="2xl">Добар ден,Марио!</Heading>
+                <Heading size="2xl">Добар ден, {user?.username}!</Heading>
                 <Text>Подолу ќе најдеш,листа на услуги од други помошници.</Text>
             </VStack>
             <SimpleGrid column={2} columnGap={3} rowGap={10} w="full">
                 <GridItem colSpan={colSpan} rounded="lg" bg="white">
                     <FormControl bg="white">
                         <Stack spacing={4}>
-                            <InputGroup colorScheme="whiteAlpha" bg="white">
+                            <InputGroup>
                                 <InputLeftElement
                                     pointerEvents='none'
                                     // eslint-disable-next-line react/no-children-prop
-                                    children={<SearchIcon color='gray.600' />}
+                                    children={<SearchIcon color='gray.300' />}
                                 />
-                                <Input type='search' placeholder='Search' />
+                                <Input                   
+                                    type="search"
+                                    placeholder="Search"
+                                    focusBorderColor="green.500"/>
                             </InputGroup>
                         </Stack>
                     </FormControl>
@@ -36,23 +42,33 @@ const ProfilesList = () => {
                 <GridItem colSpan={colSpan}>
                     <HStack justifyContent="space-between">
                         <HStack>
-                            <Button onClick={() => router.push('/helper')} w={114} h={30} rounded="lg" bg="#A9BB76" >Огласи</Button>
-
-                            <Button onClick={() => router.push('#')} w={114} h={30} rounded="lg" bg="#6B774B" >Профили</Button>
-
+                            <ButtonGroup>
+                            
+                            <Button onClick={() => router.push('/helper')} rounded="lg" bg="#A9BB76" color="white" >Огласи</Button>
+                            
+                            <Button onClick={() => router.push('/profiles')}  rounded="lg" bg="#6B774B" color="white" >Профили</Button>
+                            
+                            </ButtonGroup>
                         </HStack>
-                        <Button bg="white" colorScheme="whiteAlpha" color="black" leftIcon={<Icon as={FiFilter} />}>Филтер</Button>
+
+                        <Menu>
+                            <MenuButton as={Button} bg="white" colorScheme="whiteAlpha" color="black" leftIcon={<Icon as={FiFilter} />}>
+                                Филтер
+                            </MenuButton>
+                            <MenuList>
+                            <MenuItem>Цена</MenuItem>
+                            <MenuItem>Достапност</MenuItem>
+                            </MenuList> 
+                        </Menu>
                     </HStack>
                 </GridItem>
             </SimpleGrid>
 
 
 
-            <SimpleGrid columns={[2, null, 2]} columnGap={10} rowGap={10}>
+            <SimpleGrid columns={[2, null, 2]} columnGap={10} rowGap={10} >
                 <GridItem colSpan={colSpan}>
-
                     <VStack>
-
                         <VStack rounded="lg" bg="white" w={333} alignItems="start" pl={2} pt={5} pb={11} mb={-10} pr={10}>
                             <VStack justifyContent="end" pl={272}>
                                 <BookmarkStarFill fontSize={60} style={{ marginTop: -32, marginBottom: -28, color: "#EEDE4A" }} />
@@ -72,8 +88,8 @@ const ProfilesList = () => {
                                             <Text pt={2} fontSize={17}><StarRatingComponent
                                                 name="rate1"
                                                 starCount={5}
-                                                value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                value={3}
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -87,7 +103,7 @@ const ProfilesList = () => {
                         </VStack>
 
                         <VStack justifyContent="end" pl={293}>
-                            <IconButton bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
+                            <IconButton onClick={() => router.push('/helper-profiles')}  bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
                         </VStack>
 
                     </VStack>
@@ -111,8 +127,8 @@ const ProfilesList = () => {
                                             <Text pt={2} fontSize={17}><StarRatingComponent
                                                 name="rate1"
                                                 starCount={5}
-                                                value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                value={5}
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -126,7 +142,7 @@ const ProfilesList = () => {
                         </VStack>
 
                         <VStack justifyContent="end" pl={293}>
-                            <IconButton bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
+                            <IconButton onClick={() => router.push('/helper-profiles')} bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
                         </VStack>
 
                     </VStack>
@@ -151,8 +167,8 @@ const ProfilesList = () => {
                                             <Text pt={2} fontSize={17}><StarRatingComponent
                                                 name="rate1"
                                                 starCount={5}
-                                                value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                value={1}
+                                                starColor="#FF9529"
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -166,7 +182,7 @@ const ProfilesList = () => {
                         </VStack>
 
                         <VStack justifyContent="end" pl={293}>
-                            <IconButton bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
+                            <IconButton onClick={() => router.push('/helper-profiles')} bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
                         </VStack>
 
                     </VStack>
@@ -184,7 +200,7 @@ const ProfilesList = () => {
                                 <Stack spacing={0} w="full" direction="row" justifyContent="space-between" alignItems="start">
                                     <VStack w="full" spacing={0} alignItems="start">
                                         <Heading fontSize={15}>Ивана Јовановска</Heading>
-                                        <Text fontSize={15}>Читач</Text>
+                                        <Text fontSize={15}>Чистач</Text>
                                         <HStack style={{
                                             marginTop: -10,
                                         }}><Text fontSize={13}>Rating: </Text>
@@ -192,7 +208,7 @@ const ProfilesList = () => {
                                                 name="rate1"
                                                 starCount={5}
                                                 value={2}
-                                                starColor="black" /* color of selected icons, default `#ffb400` */
+                                                starColor="#FF9529" /* color of selected icons, default `#ffb400` */
                                                 emptyStarColor="gray"
                                             /></Text>
                                         </HStack>
@@ -206,7 +222,7 @@ const ProfilesList = () => {
                         </VStack>
 
                         <VStack justifyContent="end" pl={293}>
-                            <IconButton bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
+                            <IconButton onClick={() => router.push('/helper-profiles')} bg={"#B2C779"} _hover={{ bg: "#6B774B" }} color="white" size="md" fontSize={30} aria-label='See more' icon={<FiArrowRight />} />
                         </VStack>
 
                     </VStack>
